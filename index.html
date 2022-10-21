@@ -6,15 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de texto - Alura</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
     <section class="campoIzquierda">
         <img src="imagenes/Logo.png" class="logo"/>
         <form>
             <textarea class="ingresarTexto" maxlength="400" placeholder="Ingrese el texto aquí"></textarea>
-            <p></p>
-            <input type="button" value="Encriptar" class="boton" id="encriptar" onclick="encriptarTexto()"/>
-            <input type="button" value="Desencriptar" class="boton" onclick="desencriptarTexto()"/>
+            <p class="textoLetrasMinusculas"><span class="signo"> ! </span> Solo letras minusculas sin acentos</p>
+            <div class="container-botones">
+                <input type="button" value="Encriptar" class="boton" id="encriptar" onclick="encriptarTexto()"/>
+                <input type="button" value="Desencriptar" class="boton" id="desencriptar" onclick="desencriptarTexto()"/>
+            </div>
         </form>
     </section>
     <section class="resultado">

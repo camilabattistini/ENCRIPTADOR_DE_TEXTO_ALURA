@@ -19,31 +19,73 @@ form {
     margin: 20px 175px;
 }
 
+form .container-botones {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .ingresarTexto {
     width: 500px;
     height: 400px;
     border: none;
+    color: #0A3871;
     /*margin: 0 auto;*/
 }
 
+.signo {
+    display: inline-block;
+    width: 1.23em;
+    color: white;
+    text-align: center;
+    background-color: #495057;
+    border-radius: 50%;
+}
+
+.textoLetrasMinusculas {
+    font-size: 12px;
+}
+
+.campoIzquierda .container {
+    display: flex;
+    margin: 0 5%;
+    justify-content: space-between;
+}
+
 .boton {
-    width: 40%;
+    display: flex;
+    flex-direction: row;
+    width: 49%;
+    background-color: #D8DFE8;
     height: 2.5rem;
-    margin: 5px 10px;
+    border-radius: 24px;
+    border-color: #0A3871;
+    color: #0A3871;
+}
+
+#encriptar {
+    background-color: #0A3871;
+    color: white;
+    border: none;
 }
 
 .resultado {
     background-color: white;
     width: 400px;
-    height: 800px;
+    height: 700px;
     float: right;
     margin: 30px;
     border-radius: 32px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 3px 10px 9px #c9cbcf;
 }
 
 .textoResultadoLugar {
     text-align: center;
-    margin: 7rem 5rem;
+    margin: 3rem 5rem;
+    display: none;
 }
 
 .copiar {
@@ -51,7 +93,10 @@ form {
     height: 2.5rem;
     display: none;
     position: static;
-    margin: 18rem auto;
+    margin: 2rem auto;
+    background-color: #D8DFE8;
+    border-color: #0A3871;
+    border-radius: 24px;
 }
 
 .muñeco {
@@ -63,11 +108,13 @@ form {
     text-align: center;
     font-weight: bold;
     margin: 1rem 3rem;
+    color: #343A40;
 }
 
 .textoResultado {
     text-align: center;
     margin: 1rem 3rem;
+    color: #495057;
 }
 
 .datosPersonales {
@@ -75,4 +122,95 @@ form {
     width: 100%;
     display: inline-block;
     text-align: center;
+    color: #1d2125;
+}
+
+/*PARTE RESPONSIVE*/
+
+@media (max-width: 810px) {
+    body {
+        height: 800px;
+    }
+
+    .campoIzquierda {
+        display: flex;
+        flex-direction: column;
+        height: 60%;
+        width: 100%;
+    }
+
+    .logo {
+        width: 15%;
+        display: flex;
+    }
+
+    form {
+        margin: 5% auto;
+        width: 90%;
+        height: 100%;
+    }
+
+    form .container-form {
+        width: 80%;
+        justify-content: center;
+    }
+
+    .ingresarTexto {
+        display: flex;
+        height: 80%;
+        width: 100%;
+    }
+
+    .resultado {
+        width: 90%;
+        height: auto;
+        float: left;
+        margin-left: 5%;
+        margin-top: 3%;
+    }
+
+    .textoResultadoLugar {
+        display: none;
+        margin: 2rem;
+    }
+
+    .muñeco {
+        display: none;
+    }
+
+    .datosPersonales {
+        height: 10%;
+    }
+}
+
+@media (max-width: 420px) {
+    .ingresarTexto {
+        height: 65%;
+    }
+
+    form .container-botones {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 23%;
+    }
+
+    .boton {
+        width: 100%;
+    }
+
+    .resultado {
+        margin-top: 6%;
+    }
+
+    .tituloResultado {
+        margin: 1rem auto 0;
+    }
+
+    .textoResultado {
+        margin: 1rem auto 1.2rem;
+    }
+
+    .datosPersonales {
+        height: auto;
+    }
 }

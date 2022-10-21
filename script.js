@@ -41,6 +41,7 @@ function desencriptarTexto() {
 
 function mostrarResultadoEncriptado(resultado) {
     resultado.innerHTML = textoEncriptado;
+    textoResultadoLugar.style.display = 'block';
     copiar.style.display = 'block';
     muñeco.style.display = 'none';
     tituloResultado.style.display = 'none';
