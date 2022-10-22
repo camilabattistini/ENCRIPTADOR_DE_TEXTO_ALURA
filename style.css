@@ -1,6 +1,14 @@
+* {
+    font-size: 17px;
+}
+
 body {
     background-color: #F3F5FC;
     /*display: inline-block;*/
+}
+
+main {
+    display: flex;
 }
 
 .campoIzquierda {
@@ -84,7 +92,10 @@ form .container-botones {
 
 .textoResultadoLugar {
     text-align: center;
-    margin: 3rem 5rem;
+    margin: 3rem auto;
+    height: 50%;
+    color: #0A3871;
+    border: none;
     display: none;
 }
 
@@ -93,7 +104,7 @@ form .container-botones {
     height: 2.5rem;
     display: none;
     position: static;
-    margin: 2rem auto;
+    margin: 0rem auto 3rem;
     background-color: #D8DFE8;
     border-color: #0A3871;
     border-radius: 24px;
@@ -109,6 +120,7 @@ form .container-botones {
     font-weight: bold;
     margin: 1rem 3rem;
     color: #343A40;
+    font-size: 23px;
 }
 
 .textoResultado {
@@ -129,13 +141,18 @@ form .container-botones {
 
 @media (max-width: 810px) {
     body {
-        height: 800px;
+        height: 1080px;
+    }
+
+    main {
+        flex-direction: column;
+        height: 90%;
     }
 
     .campoIzquierda {
         display: flex;
         flex-direction: column;
-        height: 60%;
+        height: 70%;
         width: 100%;
     }
 
@@ -150,6 +167,10 @@ form .container-botones {
         height: 100%;
     }
 
+    form .container-botones {
+        height: 10%;
+    }
+
     form .container-form {
         width: 80%;
         justify-content: center;
@@ -161,17 +182,26 @@ form .container-botones {
         width: 100%;
     }
 
+    .boton {
+        margin-top: auto;
+    }
+
     .resultado {
         width: 90%;
         height: auto;
         float: left;
         margin-left: 5%;
-        margin-top: 3%;
+        margin-top: 0;
+        padding: 1rem 0 1rem 0;
+    }
+    .tituloResultado {
+        margin: 1rem 3rem 0;
     }
 
     .textoResultadoLugar {
         display: none;
         margin: 2rem;
+        height: 100px;
     }
 
     .muñeco {
@@ -179,35 +209,48 @@ form .container-botones {
     }
 
     .datosPersonales {
-        height: 10%;
+        height: auto;
     }
 }
 
 @media (max-width: 420px) {
+    main {
+        flex-direction: column;
+    }
+
+    .campoIzquierda {
+        height: 650px;
+    }
+
     .ingresarTexto {
         height: 65%;
+    }
+
+    form {
+        margin: 5% auto 0;
     }
 
     form .container-botones {
         flex-direction: column;
         justify-content: space-around;
-        height: 23%;
+        height: 24%;
     }
 
     .boton {
         width: 100%;
+        height: 34%;
     }
 
-    .resultado {
-        margin-top: 6%;
+    .textoResultadoLugar {
+        height: 100px;
     }
 
     .tituloResultado {
-        margin: 1rem auto 0;
+        margin: 1rem 1rem 0;
     }
 
     .textoResultado {
-        margin: 1rem auto 1.2rem;
+        margin: 1rem 1rem 1.2rem;
     }
 
     .datosPersonales {

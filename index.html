@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,24 +11,27 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="campoIzquierda">
-        <img src="imagenes/Logo.png" class="logo"/>
-        <form>
-            <textarea class="ingresarTexto" maxlength="400" placeholder="Ingrese el texto aquí"></textarea>
-            <p class="textoLetrasMinusculas"><span class="signo"> ! </span> Solo letras minusculas sin acentos</p>
-            <div class="container-botones">
-                <input type="button" value="Encriptar" class="boton" id="encriptar" onclick="encriptarTexto()"/>
-                <input type="button" value="Desencriptar" class="boton" id="desencriptar" onclick="desencriptarTexto()"/>
-            </div>
-        </form>
-    </section>
-    <section class="resultado">
-        <p class="textoResultadoLugar"></p>
-        <input class="copiar" type="button" value="copiar" onclick="copiarTexto()"/>
-        <img src="imagenes/Muñeco.png" class="muñeco"/>
-        <h1 class="tituloResultado">Ningún mensaje fue encontrado</h1>
-        <p class="textoResultado">Ingresá el texto que desees encriptar o desencriptar</p>
-    </section>
+    <main>
+        <section class="campoIzquierda">
+            <img src="imagenes/Logo.png" class="logo" />
+            <form>
+                <textarea class="ingresarTexto" cols="40" rows="6" placeholder="Ingrese el texto aquí"></textarea>
+                <p class="textoLetrasMinusculas"><span class="signo"> ! </span> Solo letras minusculas sin acentos</p>
+                <div class="container-botones">
+                    <input type="button" value="Encriptar" class="boton" id="encriptar" onclick="encriptarTexto()" />
+                    <input type="button" value="Desencriptar" class="boton" id="desencriptar" onclick="desencriptarTexto()" />
+                </div>
+            </form>
+        </section>
+        <section class="resultado">
+            <textarea class="textoResultadoLugar"></textarea>
+            <input class="copiar" type="button" value="copiar" onclick="copiarTexto()" />
+            <img src="imagenes/Muñeco.png" class="muñeco" />
+            <h1 class="tituloResultado">Ningún mensaje fue encontrado</h1>
+            <p class="textoResultado">Ingresá el texto que desees encriptar o desencriptar</p>
+        </section>
+    </main>
+    
     <footer class="datosPersonales">
         <p>Camila Battistini - 21 años - Estudiante de Ingeniería química y desarrollo web full stack</p>
     </footer>
